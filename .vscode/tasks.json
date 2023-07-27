@@ -1,0 +1,46 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Открыть в редакторе карт",
+            "detail": "Собирает карту и открывает в редакторе",
+            "type": "process",
+            "windows": {
+                "command": "C:\\cheapack-master\\lua53.exe"
+            },
+            "args": [
+                "${workspaceFolder}\\build.lua",
+                "${workspaceFolder}",
+                "editor"
+            ]
+        },
+        {
+            "label": "Открыть в игре",
+            "detail": "Собирает карту и открывает в игре",
+            "type": "process",
+            "windows": {
+                "command": "C:\\cheapack-master\\lua53.exe"
+            },
+            "args": [
+                "${workspaceFolder}\\build.lua",
+                "${workspaceFolder}",
+                "game"
+            ]
+        },
+        {
+            "label": "Скомпайлить карту",
+            "detail": "Собирает карту",
+            "type": "process",
+            "windows": {
+                "command": "C:\\cheapack-master\\lua53.exe"
+            },
+            "args": [
+                "${workspaceFolder}\\build.lua",
+                "${workspaceFolder}",
+                ""
+            ]
+        },
+    ]
+}
