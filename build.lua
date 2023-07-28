@@ -6,6 +6,7 @@ require 'build' {
         'src\\debugger',
         'src\\lib',
         'src\\ability',
+        'src\\story',
         'src\\init.lua'
         },
     syntaxCheck = false,

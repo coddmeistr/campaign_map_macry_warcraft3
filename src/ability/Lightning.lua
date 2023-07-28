@@ -14,7 +14,7 @@ do
 			local x, y    = GetSpellTargetX(), GetSpellTargetY()
 			local radius  = BlzGetAbilityRealLevelField(ability, ABILITY_RLF_AREA_OF_EFFECT, level - 1)
 			
-			DestroyEffect(AddSpecialEffect(EFFECT_CAST, x, y))
+			DestroyEffect(AddSpecialEffect(EFFECT_CAST, x, y))	
 			
 			TimerStart(CreateTimer(), DELAY, false, function()
 				DestroyEffect(AddSpecialEffect(EFFECT_LIGHTNING, x, y))

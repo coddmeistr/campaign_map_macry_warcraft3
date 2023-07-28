@@ -1,6 +1,6 @@
 ﻿STRING 1
 {
-Just another Warcraft III map
+История Макри: Начало
 }
 
 STRING 2
@@ -10,12 +10,12 @@ Any
 
 STRING 3
 {
-Nondescript
+TODO: Описание
 }
 
 STRING 4
 {
-Unknown
+NatriY
 }
 
 STRING 5
@@ -38,5 +38,44 @@ STRING 8
 // Abilities: A000 (Lightning), Name (Name)
 {
 Lightning
+}
+
+STRING 9
+// Units: H001 (Кавалерия), Name (Name)
+{
+Кавалерия
+}
+
+STRING 10
+// Units: h002 (Механик), Name (Name)
+{
+Механик
+}
+
+STRING 11
+// Units: h003 (Тополь), Name (Name)
+{
+Тополь
+}
+
+STRING 12
+// Units: h004 (Субмарина), Name (Name)
+{
+Субмарина
+}
+
+STRING 13
+{
+История Макри: Начало
+}
+
+STRING 14
+{
+TODO: Подописание
+}
+
+STRING 15
+{
+TODO: Описание
 }
 

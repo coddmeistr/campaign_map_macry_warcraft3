@@ -1,3 +1,10 @@
+udg_u = nil
+gg_cam_begin = nil
+gg_trg_globunits = nil
+gg_trg_camera = nil
+gg_unit_hfoo_0060 = nil
+gg_unit_H000_0024 = nil
+gg_unit_hmtt_0012 = nil
 function InitGlobals()
 end
 
@@ -8,8 +15,8 @@ local unitID
 local t
 local life
 
-u = BlzCreateUnitWithSkin(p, FourCC("H000"), -574.1, 56.4, 177.480, FourCC("H000"))
-SetHeroLevel(u, 10, false)
+gg_unit_hfoo_0060 = BlzCreateUnitWithSkin(p, FourCC("hfoo"), -2999.6, -2092.3, 151.012, FourCC("hfoo"))
+u = BlzCreateUnitWithSkin(p, FourCC("Hpal"), -2839.7, -2029.6, 135.531, FourCC("Hpal"))
 end
 
 function CreateUnitsForPlayer1()
@@ -19,29 +26,51 @@ local unitID
 local t
 local life
 
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), -1340.0, 616.7, 260.494, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), -1418.7, 268.5, 95.705, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), -402.0, 713.7, 176.325, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), -252.9, 653.4, 9.547, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), -80.8, 549.0, 311.395, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 164.0, 335.6, 201.748, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 248.7, 214.8, 350.486, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 310.6, -61.3, 2.604, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), -701.7, -522.6, 329.732, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), -834.4, -549.0, 258.198, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), -1201.8, -448.8, 233.280, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), -445.2, -646.3, 343.267, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), -233.9, -662.2, 20.128, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 248.2, -435.2, 256.648, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 74.8, -591.5, 85.531, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 400.1, -655.9, 342.652, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 396.5, -465.7, 272.535, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 205.4, -627.1, 93.013, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 275.5, -659.1, 344.124, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 274.4, -614.2, 346.585, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), -1128.4, 723.0, 313.790, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), -884.6, 760.7, 121.425, FourCC("hpea"))
-u = BlzCreateUnitWithSkin(p, FourCC("hpea"), -465.8, 760.7, 62.844, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4499.7, 6297.6, 260.494, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4421.0, 5949.3, 95.705, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5437.7, 6394.5, 176.325, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5586.8, 6334.2, 9.547, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5758.9, 6229.8, 311.395, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6003.7, 6016.4, 201.748, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6088.4, 5895.7, 350.486, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6150.3, 5619.6, 2.604, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5138.1, 5158.2, 329.732, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5005.3, 5131.8, 258.198, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4637.9, 5232.0, 233.280, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6087.9, 5245.6, 256.648, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4711.3, 6403.9, 313.790, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4955.1, 6441.5, 121.425, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5373.9, 6441.5, 62.844, FourCC("hpea"))
+end
+
+function CreateNeutralHostile()
+local p = Player(PLAYER_NEUTRAL_AGGRESSIVE)
+local u
+local unitID
+local t
+local life
+
+u = BlzCreateUnitWithSkin(p, FourCC("nwlt"), -1400.3, -1485.1, 181.756, FourCC("nwlt"))
+u = BlzCreateUnitWithSkin(p, FourCC("nwlt"), -1422.5, -1609.1, 180.621, FourCC("nwlt"))
+end
+
+function CreateNeutralPassive()
+local p = Player(PLAYER_NEUTRAL_PASSIVE)
+local u
+local unitID
+local t
+local life
+
+gg_unit_hmtt_0012 = BlzCreateUnitWithSkin(p, FourCC("hmtt"), -1143.4, -310.1, 35.550, FourCC("hmtt"))
+life = GetUnitState(gg_unit_hmtt_0012, UNIT_STATE_LIFE)
+SetUnitState(gg_unit_hmtt_0012, UNIT_STATE_LIFE, 0.10 * life)
+gg_unit_H000_0024 = BlzCreateUnitWithSkin(p, FourCC("H000"), 6157.8, 4625.2, 177.480, FourCC("H000"))
+SetHeroLevel(gg_unit_H000_0024, 10, false)
+u = BlzCreateUnitWithSkin(p, FourCC("H001"), 6323.1, 4540.4, 295.446, FourCC("H001"))
+u = BlzCreateUnitWithSkin(p, FourCC("h002"), 6386.9, 4329.4, 292.718, FourCC("h002"))
+u = BlzCreateUnitWithSkin(p, FourCC("h003"), 6760.7, 4564.9, 73.358, FourCC("h003"))
+u = BlzCreateUnitWithSkin(p, FourCC("h004"), 6531.4, 4705.0, 336.324, FourCC("h004"))
+u = BlzCreateUnitWithSkin(p, FourCC("nzep"), 6115.8, 4483.5, 71.970, FourCC("nzep"))
 end
 
 function CreatePlayerBuildings()
@@ -54,7 +83,25 @@ end
 
 function CreateAllUnits()
 CreatePlayerBuildings()
+CreateNeutralHostile()
+CreateNeutralPassive()
 CreatePlayerUnits()
+end
+
+function CreateCameras()
+gg_cam_begin = CreateCameraSetup()
+CameraSetupSetField(gg_cam_begin, CAMERA_FIELD_ZOFFSET, 0.0, 0.0)
+CameraSetupSetField(gg_cam_begin, CAMERA_FIELD_ROTATION, 94.5, 0.0)
+CameraSetupSetField(gg_cam_begin, CAMERA_FIELD_ANGLE_OF_ATTACK, 306.9, 0.0)
+CameraSetupSetField(gg_cam_begin, CAMERA_FIELD_TARGET_DISTANCE, 1693.4, 0.0)
+CameraSetupSetField(gg_cam_begin, CAMERA_FIELD_ROLL, 0.0, 0.0)
+CameraSetupSetField(gg_cam_begin, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0)
+CameraSetupSetField(gg_cam_begin, CAMERA_FIELD_FARZ, 10000.0, 0.0)
+CameraSetupSetField(gg_cam_begin, CAMERA_FIELD_NEARZ, 16.0, 0.0)
+CameraSetupSetField(gg_cam_begin, CAMERA_FIELD_LOCAL_PITCH, 0.0, 0.0)
+CameraSetupSetField(gg_cam_begin, CAMERA_FIELD_LOCAL_YAW, 0.0, 0.0)
+CameraSetupSetField(gg_cam_begin, CAMERA_FIELD_LOCAL_ROLL, 0.0, 0.0)
+CameraSetupSetDestPosition(gg_cam_begin, -2455.6, -2021.5, 0.0)
 end
 
 --CUSTOM_CODE
@@ -546,8 +593,6 @@ function abilityExecutionTrigger()
 	TriggerAddAction(AbilityTrigger, function()
 		local eventId = GetHandleId(GetTriggerEventId())
 		local ability = ABILITYS[GetSpellAbilityId()]
-
-        print("Trigger executed")
 		
 		if ability ~= nil then
 			if eventId == EventChannelId and ability.CHANNEL ~= nil then ability.CHANNEL()
@@ -569,15 +614,13 @@ do
 	ABILITY[FourCC('A000')] = {
 		EFFECT = function()
 
-            print("Ability executed")
-
 			local caster  = GetTriggerUnit()
 			local ability = GetSpellAbility()
 			local level   = GetUnitAbilityLevel(caster, GetSpellAbilityId())
 			local x, y    = GetSpellTargetX(), GetSpellTargetY()
 			local radius  = BlzGetAbilityRealLevelField(ability, ABILITY_RLF_AREA_OF_EFFECT, level - 1)
 			
-			DestroyEffect(AddSpecialEffect(EFFECT_CAST, x, y))
+			DestroyEffect(AddSpecialEffect(EFFECT_CAST, x, y))	
 			
 			TimerStart(CreateTimer(), DELAY, false, function()
 				DestroyEffect(AddSpecialEffect(EFFECT_LIGHTNING, x, y))
@@ -596,14 +639,58 @@ do
 		end
 	}
 end
+
+function startTankWhenHittedTrig()
+
+    local trig = CreateTrigger()
+    
+    TriggerRegisterUnitEvent(trig, gg_unit_hmtt_0012, EVENT_UNIT_DAMAGED)
+    
+    TriggerAddAction(trig, function()
+        -- TODO action
+        print('worked')
+    end)
+end
 OnInit.trig(function()
-    abilityExecutionTrigger()
+    abilityExecutionTrigger() -- Trigger that process all custom abilitys code
+
+    -- Story triggers
+    startTankWhenHittedTrig()
+
     print("OnInit.trig initialized")
 end)
 
-
-
 --CUSTOM_CODE
+function Trig_globunits_Actions()
+udg_u = gg_unit_hmtt_0012
+udg_u = gg_unit_hfoo_0060
+udg_u = gg_unit_H000_0024
+end
+
+function InitTrig_globunits()
+gg_trg_globunits = CreateTrigger()
+TriggerAddAction(gg_trg_globunits, Trig_globunits_Actions)
+end
+
+function Trig_camera_Actions()
+CameraSetupApplyForPlayer(true, gg_cam_begin, Player(0), 0)
+end
+
+function InitTrig_camera()
+gg_trg_camera = CreateTrigger()
+TriggerAddAction(gg_trg_camera, Trig_camera_Actions)
+end
+
+function InitCustomTriggers()
+InitTrig_globunits()
+InitTrig_camera()
+end
+
+function RunInitializationTriggers()
+ConditionalTriggerExecute(gg_trg_globunits)
+ConditionalTriggerExecute(gg_trg_camera)
+end
+
 function InitCustomPlayerSlots()
 SetPlayerStartLocation(Player(0), 0)
 SetPlayerColor(Player(0), ConvertPlayerColor(0))
@@ -617,15 +704,23 @@ SetPlayerTeam(Player(0), 0)
 end
 
 function main()
+local we
+
 SetCameraBounds(-7424.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), -7680.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM), 7424.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), 7168.0 - GetCameraMargin(CAMERA_MARGIN_TOP), -7424.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), 7168.0 - GetCameraMargin(CAMERA_MARGIN_TOP), 7424.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), -7680.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM))
-SetDayNightModels("Environment\\DNC\\DNCLordaeron\\DNCLordaeronTerrain\\DNCLordaeronTerrain.mdl", "Environment\\DNC\\DNCLordaeron\\DNCLordaeronUnit\\DNCLordaeronUnit.mdl")
+SetDayNightModels("Environment\\DNC\\DNCDalaran\\DNCDalaranTerrain\\DNCDalaranTerrain.mdl", "Environment\\DNC\\DNCDalaran\\DNCDalaranUnit\\DNCDalaranUnit.mdl")
+SetTerrainFogEx(0, 3000.0, 5000.0, 100.000, 0.000, 0.000, 0.000)
+we = AddWeatherEffect(Rect(-8192.0, -8192.0, 8192.0, 8192.0), FourCC("RLhr"))
+EnableWeatherEffect(we, true)
 NewSoundEnvironment("Default")
 SetAmbientDaySound("LordaeronSummerDay")
 SetAmbientNightSound("LordaeronSummerNight")
 SetMapMusic("Music", true, 0)
+CreateCameras()
 CreateAllUnits()
 InitBlizzard()
 InitGlobals()
+InitCustomTriggers()
+RunInitializationTriggers()
 end
 
 function config()
@@ -634,7 +729,7 @@ SetMapDescription("TRIGSTR_003")
 SetPlayers(1)
 SetTeams(1)
 SetGamePlacement(MAP_PLACEMENT_USE_MAP_SETTINGS)
-DefineStartLocation(0, 640.0, -5888.0)
+DefineStartLocation(0, -2880.0, -2112.0)
 InitCustomPlayerSlots()
 SetPlayerSlotAvailable(Player(0), MAP_CONTROL_USER)
 InitGenericPlayerSlots()
