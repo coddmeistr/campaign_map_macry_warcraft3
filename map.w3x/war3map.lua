@@ -1,8 +1,12 @@
 udg_u = nil
+gg_rct_rocksBrokenByTank = nil
+gg_rct_treesBrokenByTank = nil
+gg_rct_showTankWhenStepInto = nil
 gg_cam_begin = nil
+gg_trg_TEST = nil
 gg_trg_globunits = nil
 gg_trg_camera = nil
-gg_unit_hfoo_0060 = nil
+gg_unit_Hpal_0061 = nil
 gg_unit_H000_0024 = nil
 gg_unit_hmtt_0012 = nil
 function InitGlobals()
@@ -15,8 +19,11 @@ local unitID
 local t
 local life
 
-gg_unit_hfoo_0060 = BlzCreateUnitWithSkin(p, FourCC("hfoo"), -2999.6, -2092.3, 151.012, FourCC("hfoo"))
-u = BlzCreateUnitWithSkin(p, FourCC("Hpal"), -2839.7, -2029.6, 135.531, FourCC("Hpal"))
+gg_unit_H000_0024 = BlzCreateUnitWithSkin(p, FourCC("H000"), 5904.8, 3690.7, 177.480, FourCC("H000"))
+SetHeroLevel(gg_unit_H000_0024, 10, false)
+u = BlzCreateUnitWithSkin(p, FourCC("h001"), 6192.4, 3693.5, 259.329, FourCC("h001"))
+u = BlzCreateUnitWithSkin(p, FourCC("hfoo"), -2999.6, -2092.3, 151.012, FourCC("hfoo"))
+gg_unit_Hpal_0061 = BlzCreateUnitWithSkin(p, FourCC("Hpal"), -2839.7, -2029.6, 135.531, FourCC("Hpal"))
 end
 
 function CreateUnitsForPlayer1()
@@ -37,10 +44,55 @@ u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6150.3, 5619.6, 2.604, FourCC("hpea
 u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5138.1, 5158.2, 329.732, FourCC("hpea"))
 u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5005.3, 5131.8, 258.198, FourCC("hpea"))
 u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4637.9, 5232.0, 233.280, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 7266.6, 3436.6, 233.708, FourCC("hpea"))
 u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6087.9, 5245.6, 256.648, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 7251.0, 3354.2, 246.079, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 7243.6, 3295.5, 28.565, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 7235.3, 3229.2, 129.203, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 7229.9, 3167.3, 286.279, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 7229.9, 3109.8, 283.126, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 7222.3, 3050.6, 332.380, FourCC("hpea"))
 u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4711.3, 6403.9, 313.790, FourCC("hpea"))
 u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4955.1, 6441.5, 121.425, FourCC("hpea"))
 u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5373.9, 6441.5, 62.844, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 7215.9, 2982.0, 226.051, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 7208.4, 2923.1, 47.627, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 7193.4, 2842.4, 299.947, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 7184.1, 2786.7, 284.335, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4845.1, 3458.0, 104.318, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4844.7, 3330.0, 70.875, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4840.2, 3242.2, 328.358, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4837.2, 3146.1, 62.580, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4837.5, 3085.8, 0.231, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4844.0, 3032.2, 171.172, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4854.3, 2966.8, 148.924, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4866.8, 2920.7, 9.503, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5843.7, 2271.2, 97.891, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5943.6, 2266.0, 214.031, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6029.3, 2260.8, 111.350, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6128.9, 2250.4, 84.443, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6239.6, 2237.5, 96.979, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6333.7, 2232.3, 185.136, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6418.6, 2229.8, 139.641, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6498.9, 2229.8, 350.980, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6547.2, 2232.3, 44.902, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5117.2, 2550.7, 295.552, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5465.1, 2317.6, 261.043, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 7106.5, 2489.7, 128.918, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6896.4, 2351.6, 69.546, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4963.9, 2224.9, 306.012, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4797.9, 2114.2, 42.969, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 4844.6, 1939.9, 328.765, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5052.3, 1791.1, 318.229, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5295.9, 1744.2, 114.217, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5486.9, 1762.0, 218.503, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6569.7, 1899.9, 113.679, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6237.6, 1934.7, 182.170, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6109.8, 1756.1, 104.329, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6307.4, 1685.1, 210.098, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6504.8, 1826.9, 78.840, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 6331.3, 2092.6, 189.773, FourCC("hpea"))
+u = BlzCreateUnitWithSkin(p, FourCC("hpea"), 5786.6, 2081.9, 344.344, FourCC("hpea"))
 end
 
 function CreateNeutralHostile()
@@ -61,12 +113,9 @@ local unitID
 local t
 local life
 
-gg_unit_hmtt_0012 = BlzCreateUnitWithSkin(p, FourCC("hmtt"), -1143.4, -310.1, 35.550, FourCC("hmtt"))
+gg_unit_hmtt_0012 = BlzCreateUnitWithSkin(p, FourCC("hmtt"), -1182.6, -238.9, 327.310, FourCC("hmtt"))
 life = GetUnitState(gg_unit_hmtt_0012, UNIT_STATE_LIFE)
 SetUnitState(gg_unit_hmtt_0012, UNIT_STATE_LIFE, 0.10 * life)
-gg_unit_H000_0024 = BlzCreateUnitWithSkin(p, FourCC("H000"), 6157.8, 4625.2, 177.480, FourCC("H000"))
-SetHeroLevel(gg_unit_H000_0024, 10, false)
-u = BlzCreateUnitWithSkin(p, FourCC("H001"), 6323.1, 4540.4, 295.446, FourCC("H001"))
 u = BlzCreateUnitWithSkin(p, FourCC("h002"), 6386.9, 4329.4, 292.718, FourCC("h002"))
 u = BlzCreateUnitWithSkin(p, FourCC("h003"), 6760.7, 4564.9, 73.358, FourCC("h003"))
 u = BlzCreateUnitWithSkin(p, FourCC("h004"), 6531.4, 4705.0, 336.324, FourCC("h004"))
@@ -86,6 +135,14 @@ CreatePlayerBuildings()
 CreateNeutralHostile()
 CreateNeutralPassive()
 CreatePlayerUnits()
+end
+
+function CreateRegions()
+local we
+
+gg_rct_rocksBrokenByTank = Rect(-416.0, -992.0, -64.0, -672.0)
+gg_rct_treesBrokenByTank = Rect(-800.0, -800.0, -448.0, -288.0)
+gg_rct_showTankWhenStepInto = Rect(-1888.0, -992.0, -1088.0, -640.0)
 end
 
 function CreateCameras()
@@ -480,6 +537,23 @@ end
 if Debug then Debug.endFile() end
 
 
+
+function initGlobals()
+
+    -- TEST
+    TestHero = gg_unit_H000_0024
+
+    -- UNITS
+    Hero = gg_unit_Hpal_0061
+    Tank = gg_unit_hmtt_0012
+
+    -- REGIONS
+    RectTankRocks = gg_rct_rocksBrokenByTank
+    RectTankTrees = gg_rct_treesBrokenByTank
+    RectTankShow = gg_rct_showTankWhenStepInto
+
+end
+
 local realTimerStart = TimerStart
 TimerStart = function(timer, duration, repeating, callback)
 	local pcallback = function()
@@ -557,12 +631,14 @@ end]]
 function wc3type(ptr)
     local typ = type(ptr)
     if typ == "userdata" then
-        typ = string.match(tostring(ptr),"([^%%s]+):")
-        if typ == nil then
-            typ = string.match(tostring(ptr),"([^%%s]+)")
-        end
+        typ = string.match(tostring(ptr), "([^%%s]+):")
+        if typ == nil then typ = string.match(tostring(ptr), "([^%%s]+)") end
     elseif typ == "number" then
-        if string.match(tostring(ptr),"([^%%s]+).") then return "real" else return "integer" end
+        if string.match(tostring(ptr), "([^%%s]+).") then
+            return "real"
+        else
+            return "integer"
+        end
     end
     return typ
 end
@@ -572,6 +648,57 @@ function isInt(num)
     if math.type(num) == nil then return false end
     return true
 end
+
+-- Distance between 2 points on coords
+function distanceXY(x1, y1, x2, y2)
+    return SquareRoot(Pow(x1 - x2, 2) + Pow(y1 - y2, 2))
+end
+
+function angleXY(x1, y1, x, y)
+    return ((180.0 / 3.14159 * Atan2(y1 - y, x1 - x)) + 180) * bj_DEGTORAD
+end
+
+function setUnitXY(u, x, y)
+    SetUnitX(u, x)
+    SetUnitY(u, y)
+end
+
+function moveUnit(u, dist, angle)
+    SetUnitX(u, GetUnitX(u) + dist * Cos(angle))
+    SetUnitY(u, GetUnitY(u) + dist * Sin(angle))
+end
+
+function moveUnitToPointSpeed(u, x, y, speed, makePause, timerTick)
+
+    if  not (u and  x and  y and speed) then
+        print("Error: MoveUnitToPointSpeed")
+        return
+    end
+    timerTick = timerTick or 0.04
+    makePause = makePause or false
+    
+    SetUnitPathing(u, false)
+    if makePause then PauseUnit(u, true) end
+    TimerStart(CreateTimer(), timerTick, true, function()
+        if IsUnitDeadBJ(u) then 
+            DestroyTimer(GetExpiredTimer())
+            if makePause then PauseUnit(u, false) end
+            SetUnitPathing(u, true)
+            return
+        end
+        local distanceLeft = distanceXY(GetUnitX(u), GetUnitY(u), x, y)
+        local angle = angleXY(GetUnitX(u), GetUnitY(u), x, y)
+        local moveDist = math.min(distanceLeft, speed)
+        moveUnit(u, moveDist, angle)
+        if (distanceLeft <= speed) then
+            DestroyTimer(GetExpiredTimer())
+            if makePause then PauseUnit(u, false) end
+            SetUnitPathing(u, true)
+        end
+    end)
+
+end
+
 ABILITY = {}
 function abilityExecutionTrigger()
 	local EventChannelId = GetHandleId(EVENT_PLAYER_UNIT_SPELL_CHANNEL)
@@ -603,6 +730,26 @@ function abilityExecutionTrigger()
 			end
 		end
 	end)
+end
+do
+	local GROUP             = CreateGroup()
+	
+    -- Ability for debugging other mechanics or functions
+	ABILITY[FourCC('A002')] = {
+		EFFECT = function()
+
+			local caster  = GetTriggerUnit()
+			local ability = GetSpellAbility()
+			local level   = GetUnitAbilityLevel(caster, GetSpellAbilityId())
+			local x, y    = GetSpellTargetX(), GetSpellTargetY()
+            local target = GetSpellTargetUnit()
+			local radius  = BlzGetAbilityRealLevelField(ability, ABILITY_RLF_AREA_OF_EFFECT, level - 1)
+			
+            -- Debug ability actions (whatever)
+            moveUnitToPointSpeed(caster, x, y, 20, false)
+
+		end
+	}
 end
 do
 	local DELAY             = 1
@@ -640,30 +787,101 @@ do
 	}
 end
 
-function startTankWhenHittedTrig()
+function showTankTrig()
 
     local trig = CreateTrigger()
     
-    TriggerRegisterUnitEvent(trig, gg_unit_hmtt_0012, EVENT_UNIT_DAMAGED)
+    TriggerRegisterEnterRectSimple(trig, RectTankShow)
     
     TriggerAddAction(trig, function()
-        -- TODO action
-        print('worked')
+
+        local u = GetEnteringUnit()
+        if GetOwningPlayer(u) ~= GetLocalPlayer() then return end
+        DisableTrigger(GetTriggeringTrigger())
+
+        -- Mark and Voices TODO Voices
+        UnitShareVision(Tank, GetLocalPlayer(), true)
+        PanCameraToTimedForPlayer(GetLocalPlayer(), GetUnitX(Tank), GetUnitY(Tank), 0.7)
+        UnitAddIndicator(Tank, 255, 255, 255, 100)
+        
     end)
 end
+function startTankWhenHittedTrig()
+
+    local trig = CreateTrigger()
+
+    TriggerRegisterUnitEvent(trig, Tank, EVENT_UNIT_DAMAGED)
+
+    TriggerAddAction(trig, function()
+
+        DisableTrigger(GetTriggeringTrigger())
+        local u = GetTriggerUnit()
+
+        -- TODO Voices, Messages and marking stuff
+
+        --Moving tank to the gg_rct_rocksBrokenByTank TODO Acceleration and effects
+        moveUnitToPointSpeed(u, GetRectCenterX(RectTankRocks),
+                             GetRectCenterY(RectTankRocks), 4, true,
+                             0.01)
+
+        -- Triggers that process events
+        local breakTreesTrig = CreateTrigger()
+        TriggerRegisterEnterRectSimple(breakTreesTrig, RectTankTrees)
+        TriggerAddAction(breakTreesTrig, function()
+            if GetEnteringUnit() ~= u then return end
+
+            EnumDestructablesInRect(RectTankTrees, nil, function()
+                KillDestructable(GetEnumDestructable())
+            end)
+
+            DisableTrigger(GetTriggeringTrigger())
+            DestroyTrigger(GetTriggeringTrigger())
+        end)
+
+        local breakRocksTrig = CreateTrigger()
+        TriggerRegisterEnterRectSimple(breakRocksTrig, RectTankRocks)
+        TriggerAddAction(breakRocksTrig, function()
+            if GetEnteringUnit() ~= u then return end
+
+            TriggerSleepAction(0.2)
+            -- Destroy rocks
+            EnumDestructablesInRect(RectTankRocks, nil, function()
+                KillDestructable(GetEnumDestructable())
+            end)
+            -- Kill tank
+            KillUnit(u)
+
+            DisableTrigger(GetTriggeringTrigger())
+            DestroyTrigger(GetTriggeringTrigger())
+        end)
+
+    end)
+end
+
 OnInit.trig(function()
+    initGlobals() -- Init custom globals vars
+
     abilityExecutionTrigger() -- Trigger that process all custom abilitys code
 
     -- Story triggers
+    showTankTrig()
     startTankWhenHittedTrig()
 
     print("OnInit.trig initialized")
 end)
 
 --CUSTOM_CODE
+function Trig_TEST_Actions()
+end
+
+function InitTrig_TEST()
+gg_trg_TEST = CreateTrigger()
+TriggerAddAction(gg_trg_TEST, Trig_TEST_Actions)
+end
+
 function Trig_globunits_Actions()
+udg_u = gg_unit_Hpal_0061
 udg_u = gg_unit_hmtt_0012
-udg_u = gg_unit_hfoo_0060
 udg_u = gg_unit_H000_0024
 end
 
@@ -682,6 +900,7 @@ TriggerAddAction(gg_trg_camera, Trig_camera_Actions)
 end
 
 function InitCustomTriggers()
+InitTrig_TEST()
 InitTrig_globunits()
 InitTrig_camera()
 end
@@ -708,13 +927,13 @@ local we
 
 SetCameraBounds(-7424.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), -7680.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM), 7424.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), 7168.0 - GetCameraMargin(CAMERA_MARGIN_TOP), -7424.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), 7168.0 - GetCameraMargin(CAMERA_MARGIN_TOP), 7424.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), -7680.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM))
 SetDayNightModels("Environment\\DNC\\DNCDalaran\\DNCDalaranTerrain\\DNCDalaranTerrain.mdl", "Environment\\DNC\\DNCDalaran\\DNCDalaranUnit\\DNCDalaranUnit.mdl")
-SetTerrainFogEx(0, 3000.0, 5000.0, 100.000, 0.000, 0.000, 0.000)
 we = AddWeatherEffect(Rect(-8192.0, -8192.0, 8192.0, 8192.0), FourCC("RLhr"))
 EnableWeatherEffect(we, true)
 NewSoundEnvironment("Default")
 SetAmbientDaySound("LordaeronSummerDay")
 SetAmbientNightSound("LordaeronSummerNight")
 SetMapMusic("Music", true, 0)
+CreateRegions()
 CreateCameras()
 CreateAllUnits()
 InitBlizzard()

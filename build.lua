@@ -3,6 +3,7 @@ require 'build' {
     map = 'map.w3x',
     src = {
         'src\\total_initialization.lua',
+        'src\\globals.lua',
         'src\\debugger',
         'src\\lib',
         'src\\ability',

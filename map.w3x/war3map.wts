@@ -28,22 +28,10 @@ STRING 6
 Force 1
 }
 
-STRING 7
-// Units: H000 (Mage), Name (Name)
-{
-Mage
-}
-
 STRING 8
 // Abilities: A000 (Lightning), Name (Name)
 {
 Lightning
-}
-
-STRING 9
-// Units: H001 (Кавалерия), Name (Name)
-{
-Кавалерия
 }
 
 STRING 10
@@ -77,5 +65,53 @@ TODO: Подописание
 STRING 15
 {
 TODO: Описание
+}
+
+STRING 16
+// Units: H000 (Test Hero), Name (Name)
+{
+Test Hero
+}
+
+STRING 17
+// Units: H000 (Test Hero), EditorSuffix (Name - Editor Suffix)
+{
+Debug Hero
+}
+
+STRING 18
+// Units: H000 (Test Hero), Propernames (Proper Names)
+{
+null
+}
+
+STRING 19
+// Units: h001 (Test Unit), Name (Name)
+{
+Test Unit
+}
+
+STRING 20
+// Abilities: A001 (Debug Blink), Name (Name)
+{
+Debug Blink
+}
+
+STRING 21
+// Abilities: A002 (Debug Ability), Name (Name)
+{
+Debug Ability
+}
+
+STRING 22
+// Abilities: A002 (Debug Ability), Tip (Tooltip - Normal)
+{
+Debug Ability
+}
+
+STRING 23
+// Abilities: A002 (Debug Ability), Ubertip (Tooltip - Normal - Extended)
+{
+Debug Ability
 }
 
